@@ -26,3 +26,7 @@ end
 get '/signup' do
 
 end
+
+get '/user/:id' do
+  erb :user
+end
