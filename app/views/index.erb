@@ -1,3 +1,31 @@
 <header>
-  <h1>Welcome to Betch Answer My Survey</h1>
+  <h1>Welcome to Betch Answer My Survey</h1> 
 </header>
+
+<div id='sign_in'>
+<h2>Sign In</h2>
+    <form action='/' method='post'>
+    <input type="email" name='email' placeholder='Enter Your Email'>
+    <br>
+    <input type='password' name='password' placeholder='Enter Your Password'>
+    <br>
+    <br>
+    <button>Sign In</button>
+  </form>
+</div>
+<br>
+
+<div id='create_account'>
+
+  <h2>Create an Account</h2>
+  <form action='/signup' method='post'>
+  <input type="text" name='user[name]' placeholder='Enter Your Name'>
+  <br>
+  <input type="email" name='user[email]' placeholder='Enter Your Email'>
+  <br>
+  <input type="password" name='user[password]' placeholder='Enter a Password'>
+  <br>
+  <br>
+  <button>Create Account</button>    
+  </form>
+</div>
