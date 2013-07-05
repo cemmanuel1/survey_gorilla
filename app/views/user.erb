@@ -1,0 +1,7 @@
+<div class="profile">
+	<% @surveys.each do |survey| %>
+		<% if survey.creator_id == @user.id %>
+			<p><a href="#"><%= survey.title %></a></p>
+		<% end %>
+	<% end %>
+</div>
