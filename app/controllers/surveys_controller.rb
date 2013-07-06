@@ -19,3 +19,7 @@ end
 get '/load_partial' do 
   erb :"surveys/_question_form", layout: false
 end
+
+get '/load_response_partial' do
+  erb :"surveys/_response_form", layout: false
+end
