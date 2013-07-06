@@ -19,8 +19,9 @@ get '/survey/:survey_id' do |id|
 end
 
 post '/complete_question' do
+	p params[:question_made]
 	if params
-		Question.create(suvey_id: session[:survey_id], content: params[:question_made])
+		Question.create(survey_id: session[:survey_id], content: params[:question_made])
 	end
 end
 

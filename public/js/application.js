@@ -18,9 +18,13 @@ $(document).ready(function() {
 	});
 	$('.big_divver').on("submit", '.submit_question', function(e){
 		e.preventDefault();
-		console.log($('.add_new_response').serialize());
-		// $.post('/complete_question', function(){
-		// 	console.
+		var data = $('.add_new_response').serialize();
+
+		$.post('/complete_question', data).done(function(response) {
+			console.log(response);
+		});
+			// console.log($('.add_new_response').serialize());
+			// $('.add_new_response').serialize();
 		// });
 	});
 });
