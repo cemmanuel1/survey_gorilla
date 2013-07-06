@@ -19,3 +19,8 @@ header {
   margin: 0 auto;
   padding: 5px;
 }
+
+.big_divver {
+  width: 100%;
+  border: 1px solid black;
+}
