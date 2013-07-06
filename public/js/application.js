@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});
 	$('.big_divver').on("click", '#append_response', function(e){
 		e.preventDefault();
-		$('.response').append("<input type='text' name='survey[]response[]' placeholder='Response Here'>");
+		$('.response').append("<input type='text' name='survey[][response][]' placeholder='Response Here'>");
 	});
 });
 

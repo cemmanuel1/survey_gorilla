@@ -8,9 +8,10 @@ get '/survey/new' do
 end
 
 post '/survey/new' do
+  p params
 	survey = Survey.create(title: params[:title], creator_id: session[:user_id])
-	session[:survey_id] = survey.id
-  #erb :"surveys/create_survey"
+	# session[:survey_id] = survey.id
+ # erb :"surveys/create_survey"
 end
 
 get '/survey/:survey_id' do |id|
@@ -18,11 +19,11 @@ get '/survey/:survey_id' do |id|
   erb :"surveys/show_survey"
 end
 
-post '/complete_question' do
-	p params
-	# if params
-	# 	Question.create(survey_id: session[:survey_id], content: params[:question_made])
-	# end
+post '/complete_question' do 
+	if params
+    question= params[:survey][0].values.first
+		Question.create(survey_id: session[:survey_id], content: question)
+	end
 end
 
 get '/load_form_partial' do
