@@ -19,10 +19,10 @@ get '/survey/:survey_id' do |id|
 end
 
 post '/complete_question' do
-	p params[:question_made]
-	if params
-		Question.create(survey_id: session[:survey_id], content: params[:question_made])
-	end
+	p params
+	# if params
+	# 	Question.create(survey_id: session[:survey_id], content: params[:question_made])
+	# end
 end
 
 get '/load_form_partial' do

@@ -1,9 +1,10 @@
 <div class="added_question">
-	<form class="submit_question">
-		<input id="finalized_question" type="submit" value="Complete Question">
-	</form>
-	<form class="add_new_response" name="question">
-		<input type="text" name="question_made" placeholder="Enter question here">
-		<input id="append_response" type="submit" value="Add a Response">
-	</form>
+	<form class="add_new_response" name="question" action="/complete_question" method="post">
+		<input type="text" name='survey[]question[]' placeholder="Enter question here">
+		<input id="append_response" type="submit" value="Add a Choice">
+    <div class="response">
+     <input class="response_form" name="survey[]response[]" type="text" placeholder="Enter response here">
+   </div>
+   <input id="finalized_question" type="submit" value="Complete Question">
+ </form>
 </div>
