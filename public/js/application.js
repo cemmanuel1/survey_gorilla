@@ -1,9 +1,7 @@
 $(document).ready(function() {
 	$('#begin_survey').on("submit", function(e){
 		e.preventDefault();
-		$.post('/survey/new', function(){
-			$('#begin_survey').serialize();
-		}).done(function(){
+		$.post('/survey/new', $('#form_name').serialize()).done(function(){
 			$('.survey_creation').fadeOut("slow").empty();
 			$.get('/load_form_partial', function(response){
 				$('.big_divver').append(response);
