@@ -1,5 +1,17 @@
+<div class="top-nav">
+  <h2> <a class="home" href="#">Survenator</a></h2>
+  <form action="/user/logout" method="get">
+    <button class="logout" type="submit" formmethod="get"  formaction="/user/logout">Logout</button >
+    </form>
+</div>
+
+<div class="container"> 
+<header>
+  <h1>All Surveys</h1> 
+</header>
 <div class="survey_all">
 	<% @surveys.each do |survey| %>
 		<p><a href="#"><%= survey.title %></a></p>
 	<% end %>
+</div>
 </div>

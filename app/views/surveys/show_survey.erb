@@ -1,3 +1,11 @@
+<div class="top-nav">
+  <h2> <a class="home" href="/user/#>">Survenator</a></h2>
+  <form action="/user/logout" method="get">
+    <button class="logout" type="submit" formmethod="get"  formaction="/user/logout">Logout</button >
+    </form>
+</div>
+
+<div class="container">
 <div id="title"><%=@survey.title%></div>
 
 <div id="questions">
@@ -7,4 +15,5 @@
   <%=choice.answer%><br>
 <%end%>
 <%end%>
+</div>
 </div>

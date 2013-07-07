@@ -1,38 +1,95 @@
-.container{
-background-image: -ms-radial-gradient(left top, ellipse farthest-corner, #525252 0%, #000000 100%);
-background-image: -moz-radial-gradient(left top, ellipse farthest-corner, #525252 0%, #000000 100%);
-background-image: -o-radial-gradient(left top, ellipse farthest-corner, #525252 0%, #000000 100%);
-background-image: -webkit-gradient(radial, left top, 0, left top, 895, color-stop(0, #525252), color-stop(1, #000000));
-background-image: -webkit-radial-gradient(left top, ellipse farthest-corner, #525252 0%, #000000 100%);
-background-image: radial-gradient(ellipse farthest-corner at left top, #525252 0%, #000000 100%);
-width: 960px;
-height: 1024px;
+.top-nav {
+  width: 100%;
+  height: 64px;
+  padding-top: 8px;
+  top: -10px;
+  position: fixed;
+  z-index: 10;
+}
+
+.logout{
+  line-height: 1em;
+  margin-right: 10px;
+  float:right;
+  position: relative;
+  border-radius: 8px;
+  top: -50px;
+}
+
+.home{
+   display: inline-block;
+}
+
+.top-nav a:hover{
+text-decoration: underline;
 }
 
 
+.logout:hover{
+  background-color: gray;
+}
+
+.container{
+  background-image: -ms-radial-gradient(left top, ellipse farthest-corner, #525252 0%, #000000 100%);
+  background-image: -moz-radial-gradient(left top, ellipse farthest-corner, #525252 0%, #000000 100%);
+  background-image: -o-radial-gradient(left top, ellipse farthest-corner, #525252 0%, #000000 100%);
+  background-image: -webkit-gradient(radial, left top, 0, left top, 895, color-stop(0, #525252), color-stop(1, #000000));
+  background-image: -webkit-radial-gradient(left top, ellipse farthest-corner, #525252 0%, #000000 100%);
+  background-image: radial-gradient(ellipse farthest-corner at left top, #525252 0%, #000000 100%);
+  width: 960px;
+  height: 1024px;
+  position: relative;
+  padding-top: 50px;
+}
 
 header {
   text-align: center;
   color: #01a9b4;
   margin-top: -21px;
   padding: 20px;
+  font
 }
 
 h2 {
   color: #92bb44;
+  text-decoration: underline;
 }
 
-button{
-  border-radius: 2px;
-}
-
-#sign_in, #create_account {
-  border: 3px solid white;
+#sign_in, #create_account, .profile, .surveys, .survey_all, .questions{
+  border: 2px solid white;
   border-radius: 8px;
   text-align: center;
   width: 35%;
   margin: 0 auto;
   padding: 5px;
+}
+
+button{
+  border-radius: 2px;
+}
+.profile, .survey_all a{
+  color: #92bb44;
+  text-decoration: none;
+}
+
+.profile, .survey_all a:hover {
+  color: #a7c869;
+  text-decoration: underline;
+}
+
+.surveys,  a {
+  color: #01a9b4;
+  text-decoration: none;
+}
+
+.surveys  a:hover {
+  color: #33bac3;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #c9c9c9;
+  text-decoration: none;
 }
 
 .big_divver {

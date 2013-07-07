@@ -8,7 +8,7 @@ get '/survey/new' do
 end
 
 post '/survey/new' do
-  p params
+
 	survey = Survey.create(title: params[:title], creator_id: session[:user_id])
 	# session[:survey_id] = survey.id
  # erb :"surveys/create_survey"

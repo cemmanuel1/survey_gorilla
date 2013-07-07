@@ -1,12 +1,23 @@
-<div class="profile">
-	<% @surveys.each do |survey| %>
-		<% if survey.creator_id == @user.id %>
-			<p><a href="/survey/<%=survey.id%>"><%= survey.title %></a></p>
-		<% end %>
-	<% end %>
+<div class="top-nav">
+  <h2> <a class="home" href="/user/<%=@user.id%>"%>Survenator</a></h2>
+  <form action="/user/logout" method="get">
+    <button class="logout" type="submit" formmethod="get"  formaction="/user/logout">Logout</button >
+    </form>
 </div>
 
-<div class="surveys">
-	<p><a href="/surveys">View All Surveys</a></p>
-	<p><a href="/survey/new">Create a new Survey</a></p>
+<div class="container"> 
+  <header> <h1>Welcome  <%=@user.name%>!</h1> </header>
+  <div class="profile">
+<h2>Your Surveys </h2> 
+   <% @surveys.each do |survey| %>
+   <% if survey.creator_id == @user.id %>
+   <p><a href="/survey/<%=survey.id%>"><%= survey.title %></a></p>
+   <% end %>
+   <% end %>
+ </div>
+ <br>
+ <div class="surveys">
+   <p><a href="/surveys">View All Surveys</a></p>
+   <p><a href="/survey/new">Create a new Survey</a></p>
+ </div>
 </div>
