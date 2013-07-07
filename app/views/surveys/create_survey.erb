@@ -3,7 +3,7 @@
 </form> -->
 
 <!-- <div class="top-nav">
-  <h2> <a class="home" href="#>">Survenator</a></h2>
+  <h2> <a class="home" href="/user/<%=session[:user_id]%>"">Survenator</a></h2>
   <form action="/user/logout" method="get">
     <button class="logout" type="submit" formmethod="get"  formaction="/user/logout">Logout</button >
     </form>
@@ -21,7 +21,5 @@
 </div>
 
 <div class="final_form_submission">
-	<form id="end" action="/finalize_survey" method="post">
-		<input type="submit" value="Complete Form">
-	</form>
+	<a href='/finalize_survey'>Complete Form</a>
 </div>

@@ -12,5 +12,15 @@ $(document).ready(function() {
 		e.preventDefault();
 		$('.response').append("<input type='text' name='survey[][response][]' placeholder='Response Here'>");
 	});
+
+	$('.big_divver').on("click", '#finalized_question', function(e){
+		e.preventDefault(); 
+		$.post('/complete_question', $('input[type=text]').serialize()).done(function(){
+			$('.big_divver').empty(); 
+			$.get('/load_form_partial', function(response){
+				$('.big_divver').append(response);
+			});
+		});
+	});
 });
 

@@ -20,7 +20,6 @@ end
 
 post '/complete_question' do 
 	if params
-    p params
     question= params[:survey][0]['question']
     last_question = Question.create(survey_id: session[:survey_id], content: question)
     params[:survey][0]['response'].each {|response| Choice.create(answer: response, question_id: last_question.id )}
@@ -36,6 +35,6 @@ get '/load_response_partial' do
   erb :"surveys/_response_form", layout: false
 end
 
-post '/finalize_survey' do
-	#here we have to watch out for creating that last question
+get '/finalize_survey' do
+   redirect "/survey/#{session[:survey_id]}"
 end

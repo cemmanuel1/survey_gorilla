@@ -1,5 +1,5 @@
 <div class="top-nav">
-  <h2> <a class="home" href="#">Survenator</a></h2>
+  <h2> <a class="home" href="/user/<%=session[:user_id]%>">Survenator</a></h2>
   <form action="/user/logout" method="get">
     <button class="logout" type="submit" formmethod="get"  formaction="/user/logout">Logout</button >
     </form>
@@ -11,7 +11,7 @@
 </header>
 <div class="survey_all">
 	<% @surveys.each do |survey| %>
-		<p><a href="#"><%= survey.title %></a></p>
+		<p><a href="/survey/<%=survey.id%>"><%= survey.title %></a></p>
 	<% end %>
 </div>
 </div>
